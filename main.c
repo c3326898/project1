@@ -20,12 +20,12 @@ void substituteDecryptCipherOnly(){
 	FILE *file_in; //creating file pointers
 	FILE *file_out;
 	char ch;
-	file_in = fopen("substituteDeCipherInput.txt", "r");
+	file_in = fopen("Input.txt", "r");
 	if(file_in == NULL){
 		perror("Error while opening the file.\n");
 		exit(EXIT_FAILURE);
 	}
-	file_out = fopen("substituteDeCipherOutput.txt","w");
+	file_out = fopen("Output.txt","w");
 
 	char msgLetter[]="ABCDEFGHIJKLMNOPQRSTUVWXYZ"; //declaring message alphabet
 	// declaring LetterFreq that holds the english letters in descending order based on the usual occurrence in english language
@@ -96,12 +96,12 @@ void rotateDecryptCipherOnly(){
 	FILE *file_in; //creating file pointers
 	FILE *file_out;
 	char ch;
-	file_in = fopen("shiftDeCipherInput.txt", "r");
+	file_in = fopen("Input.txt", "r");
 	if(file_in == NULL){
 		perror("Error while opening the file.\n");
 		exit(EXIT_FAILURE);
 	}
-	file_out = fopen("shiftDeCipherOutput.txt","w");
+	file_out = fopen("Output.txt","w");
 	char msgLetter[]="ABCDEFGHIJKLMNOPQRSTUVWXYZ"; //declaring message alphabet
 	int shift, printChar;
 
@@ -156,13 +156,13 @@ void rotateDecrypt(){
 	FILE *file_out;
 	int shift, printChar;
 	char c , ch;
-	file_in = fopen("shiftDeCipherInput.txt", "r");
+	file_in = fopen("Input.txt", "r");
 	if( file_in == NULL )
 		{
 			perror("Error while opening the file.\n");
 			exit(EXIT_FAILURE);
 		}
-	file_out = fopen("shiftDeCipherOutput.txt","w");
+	file_out = fopen("Output.txt","w");
 	printf("Enter a key."); //asking for shift key
 	scanf("%d", &shift);
 	while(( ch = fgetc(file_in) ) != EOF){ //reading the input file character by character
@@ -191,14 +191,14 @@ void rotateEncrypt(){
 	5) Closing the file pointers
 	 */
 	FILE *file_in, *file_out; //creating file pointers
-	file_in = fopen("shiftCipherInput.txt", "r");
+	file_in = fopen("Input.txt", "r");
 	if( file_in == NULL )
 	    {
 	        perror("Error while opening the file.\n");
 	        exit(EXIT_FAILURE);
 	    }
 
-	file_out = fopen("shiftCipherOutput.txt","w");
+	file_out = fopen("Output.txt","w");
 
 	int shift, printChar;
 
@@ -243,12 +243,12 @@ void substituteEncrypt(){
 	FILE *file_in; //creating file pointers
 	FILE *file_out;
 	char ch, c;
-	file_in = fopen("substituteCipherInput.txt", "r");
+	file_in = fopen("Input.txt", "r");
 	if( file_in == NULL){
 		perror("Error while opening the file.\n");
 		exit(EXIT_FAILURE);
 	}
-	file_out = fopen("substituteCipherOutput.txt","w");
+	file_out = fopen("Output.txt","w");
 	int printChar, j;
 
 	while((ch = fgetc(file_in)) != EOF){ //reading the input file character by character
@@ -285,12 +285,12 @@ void substituteDecrypt(){
 	FILE *file_in; //creating file pointers
 	FILE *file_out;
 	char ch, c;
-	file_in = fopen("substituteDeCipherInput.txt", "r");
+	file_in = fopen("Input.txt", "r");
 	if( file_in == NULL){
 		perror("Error while opening the file.\n");
 		exit(EXIT_FAILURE);
 	}
-	file_out = fopen("substituteDeCipherOutput.txt","w");
+	file_out = fopen("Output.txt","w");
 	int printChar, j;
 
 	while((ch = fgetc(file_in)) != EOF ){ //reading the input file character by character
